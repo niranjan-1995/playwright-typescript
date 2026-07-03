@@ -8,6 +8,10 @@ export default defineConfig({
     headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    viewport: null,
+    launchOptions: {
+      args: ['--start-maximized']  // ← maximizes the window
+    }
   },
   projects: [
     { name: 'chromium', use: { browserName: 'chromium' } },

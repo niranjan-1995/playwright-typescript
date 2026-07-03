@@ -10,6 +10,7 @@ export class AjaxFormPage {
 
   async submitForm() {
     await this.page.getByRole('button', { name: /submit/i }).click();
+    await expect(this.page.locator('#submit-control')).toBeVisible();
   }
 
   async verifyHeading() {
